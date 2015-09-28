@@ -1,4 +1,7 @@
 if (Meteor.isClient) {
+
+  console.log(Meteor.release);
+
   var SerialPort = require("serialport").SerialPort
 
   var serialPort = new SerialPort("/dev/ttyUSB0", {
