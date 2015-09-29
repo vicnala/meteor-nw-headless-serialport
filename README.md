@@ -1,12 +1,14 @@
 # meteor-nw-headless-serialport
 
-Meteor with node-webkit as a headless client using serialport
+Meteor with node-webkit as a headless client using serialport.
+
+I said headless but, by now, you still need an X display to run nw.js. The easiest way is to start the graphic system (currently using a Raspberry Pi 2 default display).
 
 ## What is this?
 
-Is an approach to run a Meteor app in a headless client an use hardware resources on it, like the serial port.
+Is an approach to run a Meteor app in a client device and use hardware resources on it, like the serial port.
 
-I like this because I can use hot code push to the devices and manage what they are running at every time.
+I like this because I can use hot code push and manage what devices are running at every time.
 
 ## What this should be?
 
@@ -33,6 +35,9 @@ https://github.com/creationix/nvm
 ```
 nvm install 0.12.3
 nvm use 0.12
+npm install node-pre-gyp -g
+npm install nw-gyp -g
+
 ```
 
 ## Download nw.js
@@ -73,7 +78,7 @@ touch package.json
 
 "Uncaught Error: Cannot find module './node_modules/serialport/build/serialport/v1.7.4/Release/node-webkit-v0.12.2-linux-ia32/serialport.node'"
 
-It's only about path names:
+It's only about version in path name (v0.12.3 > v0.12.2):
 
 ```
 mv node_modules/serialport/build/serialport/v1.7.4/Release/node-webkit-v0.12.3-linux-ia32 node_modules/serialport/build/serialport/v1.7.4/Release/node-webkit-v0.12.2-linux-ia32
@@ -83,4 +88,10 @@ mv node_modules/serialport/build/serialport/v1.7.4/Release/node-webkit-v0.12.3-l
 
 ```
 ./nw
+```
+
+or, if you are inside a SSH session:
+
+```
+DISPLAY:0 ./nw
 ```
