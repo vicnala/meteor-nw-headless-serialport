@@ -1,8 +1,8 @@
 # meteor-nw-headless-serialport
 
-Meteor with node-webkit as a headless client using serialport.
+Meteor with node-webkit as a headless client using serialport npm module.
 
-I said headless but, by now, you still need an X display to run nw.js. The easiest way is to start the graphic system (currently using a Raspberry Pi 2 default display).
+Said headless but, by now, you still need an X display to run nw.js. The easiest way is to start the graphic system (currently using a Raspberry Pi default display).
 
 ## What is this?
 
@@ -12,10 +12,10 @@ I like this because I can use hot code push and manage what devices are running 
 
 ## What this should be?
 
-This should be the same as Meteor do for cordova so you can write a package, and then use meteor api to manage this code only on these devices. I'm trying to run this setup in a Raspberry but for now it can be any ```x86```.
+This should be the same as Meteor do for cordova so you can write a package, and then use meteor api to manage this code only on these devices.
 
 ```
-api.addFiles('serial-conrtroller.js', ['web.anyX86']);
+api.addFiles('serial-conrtroller.js', ['web.raspberry']);
 ```
 
 ## Install Meteor and run the app
