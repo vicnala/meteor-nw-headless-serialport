@@ -6,13 +6,11 @@ Said headless but, by now, you still need an X display to run nw.js. The easiest
 
 ## What is this?
 
-Is an approach to run a Meteor app in a client device and use hardware resources on it, like the serial port.
-
-I like this because I can use hot code push and manage what devices are running at every time.
+Is an approach to run a Meteor app in a client device and use hardware resources on it, like the serial port, and use hot code push and manage what devices are running at every time.
 
 ## What this should be?
 
-This should be the same as Meteor do for cordova so you can write a package, and then use meteor api to manage this code only on these devices.
+This should be the same as Meteor do for cordova so you can write a package, and then use meteor package API to manage the code that runs on these devices.
 
 ```
 api.addFiles('serial-conrtroller.js', ['web.raspberry']);
@@ -28,7 +26,7 @@ cd meteor-nw-headless-serialport.git
 meteor
 ```
 
-## Install node version manager in the headless client
+## Install node version manager into the headless client
 
 https://github.com/creationix/nvm
 
